@@ -1,0 +1,41 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  &__email{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__button{
+    outline: none;
+    background-color: gray;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    margin: 25px 0;
+    transition: .5s ease-in-out;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  @media (hover) {
+    &__button:hover{
+        opacity: .5;
+    }
+  }
+}

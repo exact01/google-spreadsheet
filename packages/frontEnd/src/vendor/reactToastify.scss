@@ -1,0 +1,19 @@
+.Toastify__toast {
+  border-radius: 15px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.3);
+  text-wrap: balance;
+}
+
+@media screen and (max-width: 767px) {
+  .Toastify__toast{
+    width: 312px !important;
+    margin: 10px auto 0 auto;
+  }
+}
+

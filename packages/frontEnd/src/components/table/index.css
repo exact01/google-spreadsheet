@@ -1,0 +1,21 @@
+.Table {
+    background-color: black;
+    color: white;
+}
+
+.Table .HeaderRow {
+    background-color: darkgray; /* Цвет заголовка */
+}
+
+.Table .Row:nth-child(even) {
+    background-color: gray; /* Цвет четных строк */
+}
+
+.Table .Cell {
+    padding: 8px;
+}
+
+.Table .HeaderCell {
+    font-weight: bold;
+    padding: 8px;
+}

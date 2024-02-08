@@ -1,0 +1,32 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "yarn && node init.js && lerna clean && yarn && lerna bootstrap && git config --local commit.template .gitcommittemplate",
+    "backend:start": "lerna run start --scope=backend",
+    "backend:dev": "lerna run dev --scope=backend",
+    "client:start": "lerna run start --scope=client",
+    "client:dev": "lerna run dev --scope=client"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=17"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/parser": "6.16.0",
+    "@typescript-eslint/typescript-estree": "6.16.0",
+    "eslint": "8.15.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-security": "1.7.1",
+    "prettier": "2.7.1",
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@evilmartians/lefthook": "1.1.1",
+    "lerna": "6.4.0"
+  }
+}

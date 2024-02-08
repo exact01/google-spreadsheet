@@ -1,0 +1,58 @@
+.page404{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  &_status{
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 48px;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  &_text{
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 48px;
+    color: #ffffff;
+    padding: 0;
+    border-radius: 10px;
+  }
+  &_button{
+    color: white;
+    text-decoration: inherit; /* no underline */
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 35px;
+    background-color: black;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    &:hover{
+      background-color: #45bd32;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &_text{
+      font-size: 18px;
+    }
+    &_button{
+      width: 260px;
+    }
+  }
+}

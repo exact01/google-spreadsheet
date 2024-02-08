@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+}
+
+.reselectContainer{
+  margin: 25px auto 40px auto;
+}
+
+.buttonContainer{
+  margin: 25px auto 40px auto;
+  &__button{
+    outline: none;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    margin: 25px 0;
+    transition: .5s ease-in-out;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  @media (hover) {
+    &__button:hover{
+      opacity: .5;
+    }
+  }
+}

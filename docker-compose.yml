@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  postgres:
+    env_file:
+      - .env
+    container_name: 'postgres'
+    image: postgres:14
+    ports:
+      - "127.0.0.1:27015:${POSTGRES_PORT}"
+    volumes:
+      - ./postgresData:/var/lib/postgresql/data
+      - ./sql/migrations/dbinit.sql:/docker-entrypoint-initdb.d/dbinit.sql
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      TZ: "Europe/Moscow"
+    networks:
+      - awesome
+volumes:
+  pgadmin-data:
+
+networks:
+  awesome:
+    driver: bridge
+    external: false

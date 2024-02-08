@@ -1,0 +1,31 @@
+@import 'fonts';
+@import 'normalize';
+@import 'variables.scss';
+
+body{
+    background-color: $--main-bg-color;
+    color: $--main-text-color;
+    scrollbar-width: $scrollbarWidth;
+    scrollbar-color: $scrollbarThumbColor $scrollbarBgColor;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: $scrollbarWidth;
+}
+body::-webkit-scrollbar-track {
+    background: $scrollbarBgColor;
+    border-radius: $scrollbarBorderRadius;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $scrollbarThumbColor;
+    border-radius: $scrollbarBorderRadius;
+    border: $scrollbarBorder;
+    background-image: linear-gradient(
+                    180deg,
+                    $scrollbarThumbColor 0%,
+                    $scrollbarThumbColorSecond 90%
+    );
+}
+
+

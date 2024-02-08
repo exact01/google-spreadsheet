@@ -1,0 +1,9 @@
+{
+  "watch": ["./"],
+  "verbose": true,
+  "ignore": ["node_modules/*", "*.test.ts", "@types/*", "*.log"],
+  "delay": 3,
+  "execMap": {
+    "ts": "ts-node"
+  }
+}

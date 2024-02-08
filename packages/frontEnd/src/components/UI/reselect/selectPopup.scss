@@ -1,0 +1,86 @@
+
+@keyframes scaleIn {
+  0%{
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50%{
+    opacity: .3;
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.selectPopup {
+
+  &__control{
+    width: 390px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    font-family: "Suisse Intl", Arial, sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 13px !important;
+    line-height: 14px !important;
+    min-height: 14px !important;
+  }
+
+  &__input-container{
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+  }
+  &__indicator-separator{
+    display: none !important;
+  }
+  &__indicators {
+    cursor: pointer !important;
+  }
+  &__indecator{
+    color: #66676e !important;
+    @media (hover) {
+      &:hover{
+        color: #999aa5 !important;
+      }
+    }
+  }
+
+  &__indicator{
+    padding: 5px !important;
+  }
+
+  &__menu{
+    font-family: "Suisse Intl", Arial, sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 13px !important;
+    background-color: #272424 !important;
+    color: rgba(white, 0.6) !important;
+    z-index: 2 !important;
+    animation: scaleIn 0.35s ease-in-out;
+  }
+  &__menu-list{
+    border-radius: 5px;
+  }
+  &__option{
+    cursor: pointer !important;
+    &--is-focused {
+      background: linear-gradient(320deg, rgb(146, 3, 144), rgb(50, 131, 189)) !important;
+      border-radius: 5px;
+    }
+    &--is-selected {
+      background: linear-gradient(320deg, rgb(3, 77, 146), rgb(69, 189, 50)) !important;
+      color: rgba(rgba(0, 0, 0, 0.44), 0.6) !important;
+      border-radius: 5px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__control{
+      width: 240px !important;
+    }
+  }
+}
+
+
+
